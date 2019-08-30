@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+<html>
+<head>
+    <title>Feedback Page</title>
+</head>
+<body>
+
+{% block content %}
+    <style>
+        form{border: 2px solid red}
+        th,td{text-align: center;}
+    </style>
+    <center>
+    <table border="2px" width="1200px">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Date</th>
+                <th>Feedback</th>
+            </tr>
+        </thead>
+        {% for i in feedbacks %}
+        <tbody>
+            <tr>
+                <td>{{ i.feedbackname.title }}</td>
+                <td style="color: black;font-weight: bold;font-size: larger";>{{ i.feedbackrating }}</td>
+                <td>{{ i.feedbackdate }}</td>
+                <td>{{ i.feedbackmsg }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </center>
+    <hr>
+    <center>
+    <form method="POST">
+        {% csrf_token %}
+            <h4>************ Please Give Feedback ************</h4>
+    {{ feedbackform.as_p }}
+    <center><input type="submit" value="Submit"></center>
+        <br>
+    </form>
+    </center>
+    <br>
+
+
+{% endblock %}
+
+
+</body>
+</html>

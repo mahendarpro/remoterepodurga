@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+
+{% block content %}
+
+    <style>
+    article img {  float:right;
+				border:solid 3px black;
+				padding:5px;
+				margin:10px;
+				box-shadow:2px 3px 5px 1px;}
+    </style>
+<h2 style="font-family: 'Times New Roman'">About Organization:</h2>
+    <p> <img src="{% static 'images\durgasoft_logo.JPG' %}">&emsp;Durgasoft is An organization or organisation is an entity comprising multiple people,found in 2000 Year such as an institution or an association, that has a particular purpose. &emsp;The word is derived from the Greek word organon, which means tool or instrument, musical instrument, and organ.A social unit of people that is structured and managed to meet a need or to pursue collective goals. All organizations have a management structure that determines relationships between the different activities and the members, and subdivides and assigns roles, responsibilities A social unit of people that is structured and managed to meet a need or to pursue collective goals. All organizations have a management structure that determines relationships between the different activities and the members, and subdivides and assigns roles, responsibilities A social unit of people that is structured and managed to meet a need or to pursue collective goals. All organizations have a management structure that determines relationships between the different activities and the members, and subdivides and assigns roles, responsibilities </p>
+
+    <article>
+    <h2>Founder:</h2>
+        <img src="{% static 'images\boy.png' %}" width="250px" height="200px">
+        <p>Founder was born in a Religious and Pious Brahmin family devoted to Lord Rama and Lord Shiva. ... He is an Electrical Engineering Graduate and has held leadership positions in the corporate world in Indian & Multinational Companies. ... His unending pursuit about Rudraksha,With a vision to create a platform that serves the youth and the will to go ahead in spite of all the hurdles that come in the way his work is slowly but surely generating a lot of attention. Elaborate version: Rachit Jain is the Founder & CEO of a unique talent platform 'Youth4work'.,With a vision to create a platform that serves the youth and the will to go ahead in spite of all the hurdles that come in the way his work is slowly but surely generating a lot of attention. Elaborate version: Rachit Jain is the Founder & CEO of a unique talent platform 'Youth4work'.
+    </p></article>
+    <br>
+    <br>
+    <br>
+
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<html>
+<head>
+    <title>Services Page</title>
+</head>
+<body>
+
+{% block content %}
+    <style>
+        th{color: green;background-color:yellow;font-size: larger;}
+        th,td{padding: 2px;text-align: center}
+        tbody:nth-of-type(odd){color: yellow;background-color: red}
+        tbody:nth-of-type(even){color: white;background-color: black}
+        table, th, td {border: black solid 2px; }
+    </style>
+    <center>
+    <h1>Services Page</h1>
+    <table width="1000px">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Course</th>
+                <th>Duration</th>
+                <th>Start Data</th>
+                <th>Start Time</th>
+                <th>Trainer</th>
+                <th>Experience</th>
+            </tr>
+        </thead>
+        {% for i in services %}
+        <tbody>
+            <tr>
+                <td>{{ i.course_id }}</td>
+                <td>{{ i.course_name.upper }}</td>
+                <td>{{ i.course_duration }}</td>
+                <td>{{ i.course_startdate }}</td>
+                <td>{{ i.course_starttime }}</td>
+                <td>{{ i.course_trainername }}</td>
+                <td>{{ i.course_trainerexp }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+    </center>
+{% endblock %}
+
+</body>
+</html>
